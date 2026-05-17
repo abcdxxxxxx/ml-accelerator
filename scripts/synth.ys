@@ -1,0 +1,5 @@
+read_verilog -sv rtl/pe.sv
+hierarchy -check -top pe
+proc; opt; fsm; opt; memory; opt
+synth -top pe
+stat
